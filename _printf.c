@@ -20,8 +20,9 @@ int _printf(const char *format, ...)
 		return (0);
 
 	va_start(ptr, format);
-	size = assistFun(format, ptr);
+	size = handler(format, ptr);
 
+	_putchar(-1);
 	va_end(ptr);
 
 	return (size);
